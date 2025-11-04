@@ -15,7 +15,6 @@ int MultFact(int iNo)
     return iMult;
      
 }
-
 int main()
 {
     int iValue = 0;
