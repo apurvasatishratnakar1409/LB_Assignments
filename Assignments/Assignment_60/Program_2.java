@@ -1,0 +1,40 @@
+import java.io.File ;
+import java.nio.file.Files;
+import java.util.Scanner ;
+
+class program_2
+{   
+    public static void main(String[] args) 
+    {
+        int iCnt = 0 ;
+        System.out.println("Enter the Directory Name : ");
+        Scanner sobj = new Scanner(System.in);
+
+        String Dname = sobj.nextLine();
+
+        File file =   new File(Dname);
+
+        if (file.isDirectory() == true)
+        {
+            File [] fArr = file.listFiles() ;
+
+            for (iCnt = 0 ; iCnt < fArr.length ; iCnt++)
+            {
+                if(Files.isRegularFile(fArr[iCnt].toPath()) == true)
+                {
+                    System.out.println("File Name : " + fArr[iCnt].getName());
+                }
+                
+            }
+            System.out.println("Total Files in Directory : "+iCnt);
+        }
+        else
+        {
+            System.out.println("Invalid Directory !!");
+            sobj.close(); 
+            return ;
+        }
+        sobj.close();
+
+    }
+}
