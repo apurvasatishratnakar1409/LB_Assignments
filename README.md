@@ -42,7 +42,7 @@ for Windows : Myexe.exe
 
 ### Java
 
-javac filename.java 
+javac filename.java ,
 java filename OR java filename.java
 
 *More instructions and examples will be added as taught in class.*
